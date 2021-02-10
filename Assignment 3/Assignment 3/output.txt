@@ -1,0 +1,125 @@
+Wed Feb  3 22:53:37 PST 2021
+*** compiling with clang++ to create an executable called myprogram
+clang version 7.0.1 (tags/RELEASE_701/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/rh/llvm-toolset-7.0/root/usr/bin
+*** running clang-tidy using options from .clang-tidy
+LLVM (http://llvm.org/):
+  LLVM version 7.0.1
+  Optimized build.
+  Default target: x86_64-unknown-linux-gnu
+  Host CPU: broadwell
+6298 warnings generated.
+12946 warnings generated.
+20336 warnings generated.
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.cpp:81:12: warning: invalid case style for variable 'output' [readability-identifier-naming]
+    string output;
+           ^~~~~~~
+           Output
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.cpp:109:12: warning: invalid case style for variable 'output' [readability-identifier-naming]
+    string output;
+           ^~~~~~~
+           Output
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.cpp:138:12: warning: invalid case style for variable 'output' [readability-identifier-naming]
+    string output;
+           ^~~~~~~
+           Output
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:33:21: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string solve(Maze& Maze);
+                           ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:37:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goNorth(Maze& Maze);
+                             ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:41:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goSouth(Maze& Maze);
+                             ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:45:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goEast(Maze& Maze);
+                            ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:49:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goWest(Maze& Maze);
+                            ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:33:21: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string solve(Maze& Maze);
+                           ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:37:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goNorth(Maze& Maze);
+                             ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:41:23: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goSouth(Maze& Maze);
+                             ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:45:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goEast(Maze& Maze);
+                            ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/creature.h:49:22: warning: non-const reference parameter 'Maze', make it const or use a pointer [google-runtime-references]
+        string goWest(Maze& Maze);
+                            ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/main.cpp:5:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <iostream>
+^        ~~~~~~~~~~
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:4:1: warning: #includes are not sorted properly [llvm-include-order]
+#include <fstream>
+^        ~~~~~~~~~
+         "maze.h"
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:17:20: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+            Out << Maze.Field[Row][Col];
+                   ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:28:1: warning: constructor does not initialize these fields: Field, Width, Height, ExitRow, ExitColumn [cppcoreguidelines-pro-type-member-init]
+Maze::Maze(const string& FileName) {
+^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:41:24: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+            InFile.get(Field[Row][Col]);
+                       ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:61:12: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+    return Field[Row][Col] == ' ';
+           ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:67:5: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+    Field[Row][Col] = '*';
+    ^
+/home/NETID/ltaing/ucourses/css342/assignment/ass3/Assignment3/maze.cpp:73:5: warning: do not use array subscript when the index is not an integer constant expression; use gsl::at() instead [cppcoreguidelines-pro-bounds-constant-array-index]
+    Field[Row][Col] = '+';
+    ^
+Suppressed 20309 warnings (20309 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+*** running myprogram
+Path: EEENNNEEEEEESEESSSEEENNNNN
+xxxxxxxxxxxxxxxxxx*x
+x     x*******xxxx*x
+x xxxxx*xxxxx***xx*x
+x xxxxx*xxxxxxx*xx*x
+x x+****     xx*xx*x
+x xxxxxxxxxx xx****x
+xxxxxxxxxxxxxxxxxxxx
+
+
+Path: EEEEEESSSWWWWSS
+xxxxxxxxxxxxxxxxxxxx
+x*******++++++xxxx+x
+x xxxxx*xxxxx+++xx+x
+x xxxxx*xxxxxxx+xx+x
+x x*****     xx+xx+x
+x x*xxxxxxxxxxx++++x
+xxx*xxxxxxxxxxxxxxxx
+
+
+Path: 
+xxxx
+x* x
+x  x
+xxxx
+
+
+Path: SSSSWWWNNNWWNWWWWWWSSSWWWWWWSS
+xxxxxxxxxxxxxxxxxxxx
+x++++++*******xxxx*x
+xxxxxxx*xxxxx***xx*x
+x+xxxxx*xxxxxxx*xx*x
+x*******     xx*xx*x
+x*xxxxxxxxxx xx****x
+x*xxxxxxxxxxxxxxxxxx
+
+
+Done!
+*** cleaning up, deleting myprogram
+Wed Feb  3 22:53:54 PST 2021
