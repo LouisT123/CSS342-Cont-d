@@ -1,0 +1,988 @@
+Tue Feb 23 21:49:33 PST 2021
+Linux csslab1.uwb.edu 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+uid=995279(ltaing) gid=2120995279(ltaing) groups=2120995279(ltaing),605559(lab-access)
+=====================================================
+ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR 
+clang-tidy NOT found in path (but is in /opt/rh/llvm-toolset-7.0/root/bin/clang-tidy )
+Add the following command to ~/.bashrc file
+     source scl_source enable llvm-toolset-7.0
+You can add the command by executing the following line
+     echo "source scl_source enable llvm-toolset-7.0" >> ~/.bashrc
+=====================================================
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+=====================================================
+2. Runs and produces correct output
+=====================================================
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 7--> 2147483647
+1: --> -2147483648--> 1--> 3--> 7--> 2147483647
+0: --> -2147483648--> 1--> 3--> 5--> 7--> 9--> 2147483647
+
+7 ? true
+3 ? true
+-100 ? false
+100 ? false
+9 ? true
+-9 ? false
+
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 7--> 2147483647
+1: --> -2147483648--> 1--> 3--> 7--> 2147483647
+0: --> -2147483648--> 1--> 3--> 7--> 9--> 2147483647
+
+
+
+0: --> -2147483648--> 1--> 2--> 3--> 4--> 5--> 6--> 17--> 42--> 100--> 2147483647
+
+test 3
+22 ? true
+4 ? false
+3 ? true
+11: --> -2147483648--> 2147483647
+10: --> -2147483648--> 2147483647
+9: --> -2147483648--> 2147483647
+8: --> -2147483648--> 2147483647
+7: --> -2147483648--> 2147483647
+6: --> -2147483648--> 2147483647
+5: --> -2147483648--> 2147483647
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 5--> 2147483647
+1: --> -2147483648--> 1--> 5--> 2147483647
+0: --> -2147483648--> 1--> 3--> 5--> 12--> 16--> 22--> 2147483647
+
+After adding 8
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 2147483647
+1: --> -2147483648--> 2147483647
+0: --> -2147483648--> 8--> 2147483647
+
+After adding 16
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 2147483647
+1: --> -2147483648--> 16--> 2147483647
+0: --> -2147483648--> 8--> 16--> 2147483647
+
+After adding 96
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 2147483647
+1: --> -2147483648--> 16--> 96--> 2147483647
+0: --> -2147483648--> 8--> 16--> 96--> 2147483647
+
+After adding 22
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 2147483647
+1: --> -2147483648--> 16--> 22--> 96--> 2147483647
+0: --> -2147483648--> 8--> 16--> 22--> 96--> 2147483647
+
+After adding 12
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 2147483647
+1: --> -2147483648--> 16--> 22--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 96--> 2147483647
+
+After adding 42
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 42--> 2147483647
+1: --> -2147483648--> 16--> 22--> 42--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 42--> 96--> 2147483647
+
+After adding 66
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 42--> 2147483647
+1: --> -2147483648--> 16--> 22--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 42--> 66--> 96--> 2147483647
+
+After adding 78
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 42--> 2147483647
+1: --> -2147483648--> 16--> 22--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 42--> 66--> 78--> 96--> 2147483647
+
+After adding 32
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 42--> 2147483647
+1: --> -2147483648--> 16--> 22--> 32--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 32--> 42--> 66--> 78--> 96--> 2147483647
+
+After adding 25
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 42--> 2147483647
+1: --> -2147483648--> 16--> 22--> 32--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 22--> 25--> 32--> 42--> 66--> 78--> 96--> 2147483647
+
+After adding 21
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 21--> 42--> 2147483647
+1: --> -2147483648--> 16--> 21--> 22--> 32--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 42--> 66--> 78--> 96--> 2147483647
+
+After adding 42
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 21--> 42--> 2147483647
+1: --> -2147483648--> 16--> 21--> 22--> 32--> 42--> 66--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 42--> 66--> 78--> 96--> 2147483647
+
+After adding 73
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 21--> 42--> 2147483647
+1: --> -2147483648--> 16--> 21--> 22--> 32--> 42--> 66--> 73--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 42--> 66--> 73--> 78--> 96--> 2147483647
+
+After adding 36
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 21--> 42--> 2147483647
+1: --> -2147483648--> 16--> 21--> 22--> 32--> 36--> 42--> 66--> 73--> 96--> 2147483647
+0: --> -2147483648--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 66--> 73--> 78--> 96--> 2147483647
+
+After adding 1
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 1--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 16--> 21--> 22--> 32--> 36--> 42--> 66--> 73--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 66--> 73--> 78--> 96--> 2147483647
+
+After adding 54
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 1--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 16--> 21--> 22--> 32--> 36--> 42--> 66--> 73--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 54--> 66--> 73--> 78--> 96--> 2147483647
+
+After adding 61
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 1--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 16--> 21--> 22--> 32--> 36--> 42--> 66--> 73--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 54--> 61--> 66--> 73--> 78--> 96--> 2147483647
+
+After adding 87
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 1--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 16--> 21--> 22--> 32--> 36--> 42--> 66--> 73--> 87--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 54--> 61--> 66--> 73--> 78--> 87--> 96--> 2147483647
+
+After adding 65
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 21--> 2147483647
+2: --> -2147483648--> 1--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 16--> 21--> 22--> 32--> 36--> 42--> 65--> 66--> 73--> 87--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 54--> 61--> 65--> 66--> 73--> 78--> 87--> 96--> 2147483647
+
+After adding 10
+4: --> -2147483648--> 21--> 2147483647
+3: --> -2147483648--> 10--> 21--> 2147483647
+2: --> -2147483648--> 1--> 10--> 21--> 42--> 2147483647
+1: --> -2147483648--> 1--> 10--> 16--> 21--> 22--> 32--> 36--> 42--> 65--> 66--> 73--> 87--> 96--> 2147483647
+0: --> -2147483648--> 1--> 8--> 10--> 12--> 16--> 21--> 22--> 25--> 32--> 36--> 42--> 54--> 61--> 65--> 66--> 73--> 78--> 87--> 96--> 2147483647
+
+test 3
+55 ? false
+40 ? true
+35 ? false
+20: --> -2147483648--> 2147483647
+19: --> -2147483648--> 2147483647
+18: --> -2147483648--> 2147483647
+17: --> -2147483648--> 2147483647
+16: --> -2147483648--> 2147483647
+15: --> -2147483648--> 2147483647
+14: --> -2147483648--> 2147483647
+13: --> -2147483648--> 2147483647
+12: --> -2147483648--> 2147483647
+11: --> -2147483648--> 2147483647
+10: --> -2147483648--> 2147483647
+9: --> -2147483648--> 2147483647
+8: --> -2147483648--> 2147483647
+7: --> -2147483648--> 2147483647
+6: --> -2147483648--> 2147483647
+5: --> -2147483648--> 2147483647
+4: --> -2147483648--> 2147483647
+3: --> -2147483648--> 2147483647
+2: --> -2147483648--> 52--> 2147483647
+1: --> -2147483648--> 11--> 40--> 52--> 2147483647
+0: --> -2147483648--> 0--> 3--> 11--> 40--> 52--> 2147483647
+
+Done.
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+WARNING: clang-tidy not available.
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./main.cpp
+9,55c9,31
+< 	// setting seed for easy testing
+< 	srand(10000);
+< 	SkipList skp(5, 80); //lvl 5 80% prob
+< 	cout << boolalpha;
+< 
+< 	
+< 	skp.add(3);
+< 	skp.add(5);
+< 	
+< 	
+< 	skp.add(vector<int>{1, 7, 9});
+< 	// cannot add existing
+< 	assert(!skp.add(vector<int>{1, 7}));
+< 	cout << skp << endl;
+< 	cout << "7 ? " << skp.contains(7) << endl;
+< 	cout << "3 ? " << skp.contains(3) << endl;
+< 	cout << "-100 ? " << skp.contains(-100) << endl;
+< 	cout << "100 ? " << skp.contains(100) << endl;
+< 	cout << "9 ? " << skp.contains(9) << endl;
+< 	cout << "-9 ? " << skp.contains(-9) << endl << endl;
+< 	bool result = skp.remove(5);
+< 	assert(result);
+< 	//cannot remove 5 again
+< 	result = skp.remove(5);
+< 	assert(!result);
+< 	
+< 	cout << skp << endl;
+< 	
+< }
+< 
+< 
+< void test2()
+< {
+< 	cout << endl << endl;
+< 	srand(10000);
+< 	SkipList skp(1, 50); //lvl 1 50% prob
+< 	cout << boolalpha;
+< 
+< 	//add
+< 	skp.add(1);
+< 	skp.add(2);
+< 	skp.add(2);
+< 	skp.add(vector<int>{4, 5, 3});
+< 	//skips dupe 2
+< 	skp.add(vector<int>{6, 17, 2, 42, 100});
+< 	cout << skp << endl;
+< 
+---
+>   // setting seed for easy testing
+>   srand(10000);
+>   SkipList skp(5, 80); // lvl 5 80% prob
+>   cout << boolalpha;
+> 
+>   skp.add(3);
+>   skp.add(5);
+> 
+>   skp.add(vector<int>{ 1, 7, 9 });
+>   // cannot add existing
+>   assert(!skp.add(vector<int>{ 1, 7 }));
+>   cout << skp << endl;
+>   cout << "7 ? " << skp.contains(7) << endl;
+>   cout << "3 ? " << skp.contains(3) << endl;
+>   cout << "-100 ? " << skp.contains(-100) << endl;
+>   cout << "100 ? " << skp.contains(100) << endl;
+>   cout << "9 ? " << skp.contains(9) << endl;
+>   cout << "-9 ? " << skp.contains(-9) << endl << endl;
+>   bool result = skp.remove(5);
+>   assert(result);
+>   // cannot remove 5 again
+>   result = skp.remove(5);
+>   assert(!result);
+56a33
+>   cout << skp << endl;
+59,85c36,49
+< void test3()
+< {
+< 	cout << "test 3" << endl;
+< 	srand(10000);
+< 	SkipList skp(12, 40); //lvl 12 40% prob
+< 	cout << boolalpha;
+< 
+< 	//add
+< 	skp.add(1);
+< 	skp.add(22);
+< 	//cannot add again
+< 	skp.add(1);
+< 
+< 	skp.add(vector<int>{4, 5, 3});
+< 	skp.add(vector<int>{12, 4, 16});
+< 
+< 	bool result = skp.remove(4);
+< 	assert(result);
+< 	//cannot remove 4 again
+< 	result = skp.remove(4);
+< 	assert(!result);
+< 
+< 	cout << "22 ? " << skp.contains(22) << endl;
+< 	cout << "4 ? " << skp.contains(4) << endl;
+< 	cout << "3 ? " << skp.contains(3) << endl;
+< 	cout << skp << endl;
+< 
+---
+> void test2() {
+>   cout << endl << endl;
+>   srand(10000);
+>   SkipList skp(1, 50); // lvl 1 50% prob
+>   cout << boolalpha;
+> 
+>   // add
+>   skp.add(1);
+>   skp.add(2);
+>   skp.add(2);
+>   skp.add(vector<int>{ 4, 5, 3 });
+>   // skips dupe 2
+>   skp.add(vector<int>{ 6, 17, 2, 42, 100 });
+>   cout << skp << endl;
+87a52,77
+> void test3() {
+>   cout << "test 3" << endl;
+>   srand(10000);
+>   SkipList skp(12, 40); // lvl 12 40% prob
+>   cout << boolalpha;
+> 
+>   // add
+>   skp.add(1);
+>   skp.add(22);
+>   // cannot add again
+>   skp.add(1);
+> 
+>   skp.add(vector<int>{ 4, 5, 3 });
+>   skp.add(vector<int>{ 12, 4, 16 });
+> 
+>   bool result = skp.remove(4);
+>   assert(result);
+>   // cannot remove 4 again
+>   result = skp.remove(4);
+>   assert(!result);
+> 
+>   cout << "22 ? " << skp.contains(22) << endl;
+>   cout << "4 ? " << skp.contains(4) << endl;
+>   cout << "3 ? " << skp.contains(3) << endl;
+>   cout << skp << endl;
+> }
+91,97c81,87
+< 	SkipList s(5);
+< 	for (int i = 0; i < 20; ++i) {
+< 		int number = rand() % 100;
+< 		s.add(number);
+< 		cout << "After adding " << number << endl;
+< 		cout << s << endl;
+< 	}
+---
+>   SkipList s(5);
+>   for (int i = 0; i < 20; ++i) {
+>     int number = rand() % 100;
+>     s.add(number);
+>     cout << "After adding " << number << endl;
+>     cout << s << endl;
+>   }
+100,124c90,113
+< void test5()
+< {
+< 	cout << "test 3" << endl;
+< 	srand(10000);
+< 	SkipList skp(21, 75); //lvl 21 75% prob
+< 	cout << boolalpha;
+< 	//add
+< 	skp.add(11);
+< 	skp.add(0);
+< 	//cannot add again
+< 	skp.add(0);
+< 
+< 	skp.add(vector<int>{40, 52, 3});
+< 	skp.add(vector<int>{1, 40, 52});
+< 
+< 	bool result = skp.remove(1);
+< 	assert(result);
+< 	//cannot remove 1 again
+< 	result = skp.remove(1);
+< 	assert(!result);
+< 
+< 	cout << "55 ? " << skp.contains(55) << endl;
+< 	cout << "40 ? " << skp.contains(40) << endl;
+< 	cout << "35 ? " << skp.contains(35) << endl;
+< 	cout << skp << endl;
+---
+> void test5() {
+>   cout << "test 3" << endl;
+>   srand(10000);
+>   SkipList skp(21, 75); // lvl 21 75% prob
+>   cout << boolalpha;
+>   // add
+>   skp.add(11);
+>   skp.add(0);
+>   // cannot add again
+>   skp.add(0);
+> 
+>   skp.add(vector<int>{ 40, 52, 3 });
+>   skp.add(vector<int>{ 1, 40, 52 });
+> 
+>   bool result = skp.remove(1);
+>   assert(result);
+>   // cannot remove 1 again
+>   result = skp.remove(1);
+>   assert(!result);
+> 
+>   cout << "55 ? " << skp.contains(55) << endl;
+>   cout << "40 ? " << skp.contains(40) << endl;
+>   cout << "35 ? " << skp.contains(35) << endl;
+>   cout << skp << endl;
+129,133c118,122
+< 	test1();
+< 	test2();
+< 	test3();
+< 	test04();
+< 	test5();
+---
+>   test1();
+>   test2();
+>   test3();
+>   test04();
+>   test5();
+135,136c124,125
+< 	cout << "Done." << endl;
+< 	return 0;
+---
+>   cout << "Done." << endl;
+>   return 0;
+Running clang-format on ./skiplist.cpp
+1,3c1,3
+< //skiplist.cpp
+< //impelementations of functions declared in skiplist.h
+< //Louis Taing
+---
+> // skiplist.cpp
+> // impelementations of functions declared in skiplist.h
+> // Louis Taing
+15,56c15,55
+< //Purpose: output Skiplist
+< //Preconditions: takes Skiplist object
+< //Postconditions: outputs Skiplist with all levels to console window
+< ostream& operator<<(ostream& out, const SkipList& skip) {
+<     for (int d = skip.maxLevel - 1; d >= 0; d--) {
+<         out << d << ": ";
+<         SNode* curr = skip.FrontGuards[d];
+< 
+< 
+<         while (curr != nullptr) {
+<             out << "--> " << (curr->value);
+<             curr = curr->forward;
+<         }
+<         out << endl;
+<     }
+<     return out;
+< }
+< 
+< 
+< //Purpose: constructor
+< //Preconditions: none
+< //Postconditions: outputs SNode object
+< SNode::SNode(int value) : value{ value }, forward{ nullptr }, 
+<                           backward{ nullptr }, up{ nullptr }, down{ nullptr } {}
+< 
+< //Purpose: given a SNode, place it before the given nextNode
+< //Preconditions: takes in two SNodes* a new and next node
+< //Postconditions: none
+< void SkipList::addBefore(SNode* NewNode, SNode* NextNode) {
+<     // Link next to node in front
+<     NewNode->forward = NextNode;
+<     // Link prev to node behind
+<     NewNode->backward = NextNode->backward;
+<     // Link node in back to new node
+<     NextNode->backward->forward = NewNode;
+<     // Link node in front to new node
+<     NextNode->backward = NewNode;
+< }
+< 
+< //Purpose: flip coin to see if should insert node at higher level
+< //Preconditions: none
+< //Postconditions: return true p% of time for p = 50, each node has a 50% 
+---
+> // Purpose: output Skiplist
+> // Preconditions: takes Skiplist object
+> // Postconditions: outputs Skiplist with all levels to console window
+> ostream &operator<<(ostream &out, const SkipList &skip) {
+>   for (int d = skip.maxLevel - 1; d >= 0; d--) {
+>     out << d << ": ";
+>     SNode *curr = skip.FrontGuards[d];
+> 
+>     while (curr != nullptr) {
+>       out << "--> " << (curr->value);
+>       curr = curr->forward;
+>     }
+>     out << endl;
+>   }
+>   return out;
+> }
+> 
+> // Purpose: constructor
+> // Preconditions: none
+> // Postconditions: outputs SNode object
+> SNode::SNode(int value)
+>     : value{ value }, forward{ nullptr }, backward{ nullptr }, up{ nullptr },
+>       down{ nullptr } {}
+> 
+> // Purpose: given a SNode, place it before the given nextNode
+> // Preconditions: takes in two SNodes* a new and next node
+> // Postconditions: none
+> void SkipList::addBefore(SNode *NewNode, SNode *NextNode) {
+>   // Link next to node in front
+>   NewNode->forward = NextNode;
+>   // Link prev to node behind
+>   NewNode->backward = NextNode->backward;
+>   // Link node in back to new node
+>   NextNode->backward->forward = NewNode;
+>   // Link node in front to new node
+>   NextNode->backward = NewNode;
+> }
+> 
+> // Purpose: flip coin to see if should insert node at higher level
+> // Preconditions: none
+> // Postconditions: return true p% of time for p = 50, each node has a 50%
+59,60c58,59
+<     //return rand() % 100 < probability;
+<     return rand() % 2 == 1;
+---
+>   // return rand() % 100 < probability;
+>   return rand() % 2 == 1;
+64c63
+< SNode** FrontGuards;
+---
+> SNode **FrontGuards;
+67c66
+< SNode** RearGuards;
+---
+> SNode **RearGuards;
+69,71c68,71
+< //Purpose: constructor: default SkipList has only 1 level, just one doubly-linked list
+< //Preconditions: takes in integers for max level and probability
+< //Postconditions: outputs built timespan object
+---
+> // Purpose: constructor: default SkipList has only 1 level, just one
+> // doubly-linked list
+> // Preconditions: takes in integers for max level and probability
+> // Postconditions: outputs built timespan object
+74c74
+<     assert(maxLevel > 0 && probability >= 0 && probability < 100);
+---
+>   assert(maxLevel > 0 && probability >= 0 && probability < 100);
+76c76
+<     this->maxLevel = maxLevel;
+---
+>   this->maxLevel = maxLevel;
+78,82c78,93
+<     //sets up nodes
+<     FrontGuards = new SNode *[maxLevel];
+<     RearGuards = new SNode *[maxLevel];
+<     auto Front = new SNode(INT_MIN);
+<     auto Back = new SNode(INT_MAX);
+---
+>   // sets up nodes
+>   FrontGuards = new SNode *[maxLevel];
+>   RearGuards = new SNode *[maxLevel];
+>   auto Front = new SNode(INT_MIN);
+>   auto Back = new SNode(INT_MAX);
+> 
+>   // sets front and read to +/-inf?
+>   Front->forward = Back;
+>   Back->backward = Front;
+> 
+>   FrontGuards[0] = Front;
+>   RearGuards[0] = Back;
+> 
+>   for (int i = 1; i < maxLevel; i++) {
+>     Front = new SNode(INT_MIN);
+>     Back = new SNode(INT_MAX);
+84d94
+<     //sets front and read to +/-inf?
+87,99c97,98
+<     
+<     FrontGuards[0] = Front;
+<     RearGuards[0] = Back;
+< 
+<     for (int i = 1; i < maxLevel; i++)
+<     {
+<         Front = new SNode(INT_MIN);
+<         Back = new SNode(INT_MAX);
+< 
+<         Front->forward = Back;
+<         Back->backward = Front;
+<         FrontGuards[i] = Front;
+<         RearGuards[i] = Back;
+---
+>     FrontGuards[i] = Front;
+>     RearGuards[i] = Back;
+101,102c100,101
+<         Front->down = FrontGuards[i - 1];
+<         FrontGuards[i - 1]->up = Front;
+---
+>     Front->down = FrontGuards[i - 1];
+>     FrontGuards[i - 1]->up = Front;
+104,107c103,105
+<         Front->down = FrontGuards[i - 1];
+<         RearGuards[i - 1]->up = Back;
+< 
+<     }
+---
+>     Front->down = FrontGuards[i - 1];
+>     RearGuards[i - 1]->up = Back;
+>   }
+110,112c108,110
+< //Purpose: destructor
+< //Preconditions: takes in a skiplist object
+< //Postconditions: deletes built skiplist object freeing memory
+---
+> // Purpose: destructor
+> // Preconditions: takes in a skiplist object
+> // Postconditions: deletes built skiplist object freeing memory
+114,132c112,128
+<     // need to delete individual nodes
+<     for (int i = 0; i < maxLevel; i++) {
+<         SNode* Current = FrontGuards[i];
+<         SNode* Temp;
+<         while (Current != nullptr) {
+<             Temp = Current->forward;
+<             delete Current;
+<             Current = Temp;
+<         }
+<         
+<     }
+<     delete[] FrontGuards;
+<     delete[] RearGuards;
+< }
+< 
+< 
+< //Purpose: add nodes to Skiplist
+< //Preconditions: takes in a integer value, a Skiplist exists
+< //Postconditions: return true if successfully added, no duplicates allowed 
+---
+>   // need to delete individual nodes
+>   for (int i = 0; i < maxLevel; i++) {
+>     SNode *Current = FrontGuards[i];
+>     SNode *Temp;
+>     while (Current != nullptr) {
+>       Temp = Current->forward;
+>       delete Current;
+>       Current = Temp;
+>     }
+>   }
+>   delete[] FrontGuards;
+>   delete[] RearGuards;
+> }
+> 
+> // Purpose: add nodes to Skiplist
+> // Preconditions: takes in a integer value, a Skiplist exists
+> // Postconditions: return true if successfully added, no duplicates allowed
+134,220c130,208
+<     // Create a pointer to the beginning of the list
+<     SNode* Curr = FrontGuards[0]->forward;
+<     // Move forward until you find a duplicate or something greater
+<     while (Curr->value < value) {
+<         Curr = Curr->forward;
+<     }
+<     //no dupes
+<     if (Curr->value == value) {
+<         return false;
+<     }
+<     // Make a new node and insert it into the SkipList
+<     auto newNode = new SNode(value); 
+<     addBefore(newNode, Curr); //connect pointers
+<     //check 
+<     assert(newNode->forward == Curr && Curr->backward == newNode);
+<     assert(newNode->backward != nullptr && newNode->backward->value < newNode->value);
+<     // Check to see if you need to go up a level
+<     bool NextLevel = shouldInsertAtHigher();
+< 
+<     //higher level
+<     int CurrDepth = 1;
+<     
+<    
+<     while (NextLevel && (CurrDepth < maxLevel))
+<     {
+<         SNode* newNode = FrontGuards[CurrDepth]->forward;
+<         //Create another node to be inserted at the higher level, newUpper
+<         SNode* newUpper = new SNode(value);
+<         
+<         if (newUpper == nullptr) {
+<             return false;
+<         }
+<         
+<         newUpper->down = newNode;
+<         newNode->up = newUpper;
+<         
+<         addBefore(newUpper, newNode);
+<         sort(newUpper);
+<         newNode = newUpper;
+<         
+<         ++CurrDepth;
+<         NextLevel = shouldInsertAtHigher();
+<     }
+<     return true;
+<     
+< }
+< 
+< //Purpose: filling the Skiplist with added nodes
+< //Preconditions: takes in vector integer value, a SKiplist exists
+< //Postconditions: return true if successfully added, no duplicates allowed
+< bool SkipList::add(const vector<int>& values) {
+< 
+<     for (auto v = values.begin(); v != values.end(); v++)
+<     {
+<         //if vector contains value return false
+<         if (count(values.begin(), values.end(), values.size() - 1))
+<         {
+<             return false;
+<         }
+<         add(*v);
+<     }
+<     return true;
+< }
+< 
+< //Purpose: sorts nodes in Skiplist
+< //Preconditions: takes in a SNode, a SKiplist exists
+< //Postconditions: return true if successfully added, no duplicates allowed
+< void SkipList::sort(SNode* input)
+< {
+<     SNode* Curr;
+<     SNode* Next(NULL);
+<     Curr = input;
+<     while (Curr->forward != Next)
+<     {
+<         if (Curr->value > Curr->forward->value)
+<         {
+<             swap(Curr->value, Curr->forward->value);
+<         }
+<         Curr = Curr->forward;
+<     }
+<     Next = Curr;
+< }
+< 
+< 
+< //Purpose: removes nodes from Skiplist
+< //Preconditions: takes in a SNode, a Skiplist exists
+< //Postconditions: return true if successfully removed
+---
+>   // Create a pointer to the beginning of the list
+>   SNode *Curr = FrontGuards[0]->forward;
+>   // Move forward until you find a duplicate or something greater
+>   while (Curr->value < value) {
+>     Curr = Curr->forward;
+>   }
+>   // no dupes
+>   if (Curr->value == value) {
+>     return false;
+>   }
+>   // Make a new node and insert it into the SkipList
+>   auto newNode = new SNode(value);
+>   addBefore(newNode, Curr); // connect pointers
+>   // check
+>   assert(newNode->forward == Curr && Curr->backward == newNode);
+>   assert(newNode->backward != nullptr &&
+>          newNode->backward->value < newNode->value);
+>   // Check to see if you need to go up a level
+>   bool NextLevel = shouldInsertAtHigher();
+> 
+>   // higher level
+>   int CurrDepth = 1;
+> 
+>   while (NextLevel && (CurrDepth < maxLevel)) {
+>     SNode *newNode = FrontGuards[CurrDepth]->forward;
+>     // Create another node to be inserted at the higher level, newUpper
+>     SNode *newUpper = new SNode(value);
+> 
+>     if (newUpper == nullptr) {
+>       return false;
+>     }
+> 
+>     newUpper->down = newNode;
+>     newNode->up = newUpper;
+> 
+>     addBefore(newUpper, newNode);
+>     sort(newUpper);
+>     newNode = newUpper;
+> 
+>     ++CurrDepth;
+>     NextLevel = shouldInsertAtHigher();
+>   }
+>   return true;
+> }
+> 
+> // Purpose: filling the Skiplist with added nodes
+> // Preconditions: takes in vector integer value, a SKiplist exists
+> // Postconditions: return true if successfully added, no duplicates allowed
+> bool SkipList::add(const vector<int> &values) {
+> 
+>   for (auto v = values.begin(); v != values.end(); v++) {
+>     // if vector contains value return false
+>     if (count(values.begin(), values.end(), values.size() - 1)) {
+>       return false;
+>     }
+>     add(*v);
+>   }
+>   return true;
+> }
+> 
+> // Purpose: sorts nodes in Skiplist
+> // Preconditions: takes in a SNode, a SKiplist exists
+> // Postconditions: return true if successfully added, no duplicates allowed
+> void SkipList::sort(SNode *input) {
+>   SNode *Curr;
+>   SNode *Next(NULL);
+>   Curr = input;
+>   while (Curr->forward != Next) {
+>     if (Curr->value > Curr->forward->value) {
+>       swap(Curr->value, Curr->forward->value);
+>     }
+>     Curr = Curr->forward;
+>   }
+>   Next = Curr;
+> }
+> 
+> // Purpose: removes nodes from Skiplist
+> // Preconditions: takes in a SNode, a Skiplist exists
+> // Postconditions: return true if successfully removed
+222,261c210,212
+< bool SkipList::remove(int value) { 
+<     //if doesnt contain value, cannot remove
+<     if (contains(value) == false)
+<     {
+<         return false;
+<     }
+<     //for each level
+<     for (int i = 0; i < maxLevel; i++)
+<     {
+<         SNode* current = FrontGuards[i];
+<         //while next ptr is not null
+<         while (current->forward != nullptr )
+<         {
+<             //continue forward
+<             current = current->forward;
+<             //value is same value as one called, readjust all nodes
+<             if (current->value == value)
+<             {
+<                 current->backward->forward = current->forward;
+<                 current->forward->backward = current->backward;
+<             }
+<         }
+<     }
+<     return true; 
+< }
+< 
+< //Purpose: see if nodes contained in Skiplist
+< //Preconditions: takes in a integer data, a SKiplist exists
+< //Postconditions: return true if found in SkipList
+< bool SkipList::contains(int value) const { 
+<     SNode* Temp{};
+<     for (int i = maxLevel; i-- > 0;) {
+<         Temp = FrontGuards[i];
+<         while (Temp != nullptr && Temp->value < value) {
+<             Temp = Temp->forward;
+<             if (Temp->value == value) {
+<                 return true;
+<             }
+<         }
+<     }
+---
+> bool SkipList::remove(int value) {
+>   // if doesnt contain value, cannot remove
+>   if (contains(value) == false) {
+262a214,246
+>   }
+>   // for each level
+>   for (int i = 0; i < maxLevel; i++) {
+>     SNode *current = FrontGuards[i];
+>     // while next ptr is not null
+>     while (current->forward != nullptr) {
+>       // continue forward
+>       current = current->forward;
+>       // value is same value as one called, readjust all nodes
+>       if (current->value == value) {
+>         current->backward->forward = current->forward;
+>         current->forward->backward = current->backward;
+>       }
+>     }
+>   }
+>   return true;
+> }
+> 
+> // Purpose: see if nodes contained in Skiplist
+> // Preconditions: takes in a integer data, a SKiplist exists
+> // Postconditions: return true if found in SkipList
+> bool SkipList::contains(int value) const {
+>   SNode *Temp{};
+>   for (int i = maxLevel; i-- > 0;) {
+>     Temp = FrontGuards[i];
+>     while (Temp != nullptr && Temp->value < value) {
+>       Temp = Temp->forward;
+>       if (Temp->value == value) {
+>         return true;
+>       }
+>     }
+>   }
+>   return false;
+265,273c249,250
+< //getter returns maxlevel
+< int SkipList::getMaxLevel() const
+< {
+<     return maxLevel;
+< }
+< 
+< 
+< 
+< 
+---
+> // getter returns maxlevel
+> int SkipList::getMaxLevel() const { return maxLevel; }
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==22302== Memcheck, a memory error detector
+==22302== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22302== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==22302== Command: ./a.out
+==22302== Parent PID: 22244
+==22302== 
+==22302== 
+==22302== HEAP SUMMARY:
+==22302==     in use at exit: 160 bytes in 4 blocks
+==22302==   total heap usage: 185 allocs, 181 frees, 80,148 bytes allocated
+==22302== 
+==22302== LEAK SUMMARY:
+==22302==    definitely lost: 160 bytes in 4 blocks
+==22302==    indirectly lost: 0 bytes in 0 blocks
+==22302==      possibly lost: 0 bytes in 0 blocks
+==22302==    still reachable: 0 bytes in 0 blocks
+==22302==         suppressed: 0 bytes in 0 blocks
+==22302== Rerun with --leak-check=full to see details of leaked memory
+==22302== 
+==22302== For lists of detected and suppressed errors, rerun with: -s
+==22302== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+clang: error: unknown argument: '-fprofile-instr-generate'
+clang: error: unknown argument: '-fcoverage-mapping'
+ERROR: ./check-code-coverage.sh: Failed to create executable
+Tue Feb 23 21:49:38 PST 2021
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
